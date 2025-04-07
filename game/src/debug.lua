@@ -1,17 +1,20 @@
-local hate = love.errorhandler
-local DEBUG = false
-
-for _, v in ipairs(arg) do
-    if v == "-debug" then
-        DEBUG = true
-        goto DEBUG_SET
+if os.getenv "LOCAL_LUA_DEBUGGER_VSCODE" == "1" then
+    local DEBUG = false
+    for _, v in ipairs(arg) do
+        if v == "-debug" then
+            DEBUG = true
+            goto DEBUG_SET -- I wish `break` keyword existed in Lua...
+        end
     end
-end
-::DEBUG_SET::
+    ::DEBUG_SET::
 
-if DEBUG then require("lldebugger").start() end
+    if DEBUG then
+        local lldebugger = require "lldebugger"
 
-function love.errorhandler(msg)
-    if lldebugger then error(msg, 2) end
-    return love.errorhandler(msg)
+        function love.errorhandler(msg)
+            error(msg, 2)
+        end
+
+        lldebugger.start()
+    end
 end
