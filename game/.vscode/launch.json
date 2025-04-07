@@ -8,9 +8,12 @@
                 "command": "love"
             },
             "args": [
-                ".",
+                "${workspaceFolder}",
                 "-debug"
             ],
+            "scriptRoots": [
+                "${workspaceFolder}"
+            ]
         },
         {
             "type": "lua-local",
@@ -20,7 +23,7 @@
                 "command": "love"
             },
             "args": [
-                ".",
+                "${workspaceFolder}",
             ],
         }
     ]
