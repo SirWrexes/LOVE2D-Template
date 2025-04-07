@@ -1,0 +1,17 @@
+{
+    "tasks": [
+        {
+            "label": "Build LÖVE",
+            "type": "process",
+            "command": "makelove",
+            "args": [
+                "--config",
+                "make.toml"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+    ]
+}
