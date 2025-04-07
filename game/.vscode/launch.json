@@ -6,15 +6,16 @@
             "request": "launch",
             "name": "Debug",
             "program": {
-                "command": "love"
+                "command": "love",
             },
             "args": [
-                "${workspaceFolder}",
+                "\"${workspaceFolder}\"",
                 "-debug"
             ],
             "scriptRoots": [
                 "${workspaceFolder}"
-            ]
+            ],
+            "verbose": true
         },
         {
             "type": "lua-local",
@@ -24,7 +25,7 @@
                 "command": "love"
             },
             "args": [
-                "${workspaceFolder}",
+                "\"${workspaceFolder}\"",
             ],
         }
     ]
