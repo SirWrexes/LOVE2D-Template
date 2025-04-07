@@ -19,8 +19,11 @@
     ],
     "settings": {
         "licenser.disableAutoHeaderInsertion": true,
-        "licenser.license": "CC-BY-NC-4",
-        "licenser.projectName": "LÖVE Game",
-        "licenser.useSingleLineStyle": false
+        "licenser.license": "MIT",
+        "licenser.projectName": "LÖVE Template",
+        "licenser.useSingleLineStyle": false,
+        "material-icon-theme.folders.associations": {
+            "game": "Robot"
+        }
     }
 }
