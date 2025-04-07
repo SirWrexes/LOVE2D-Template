@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "name": "Game",
+            "path": "./game",
+        },
+        {
+            "name": "Tools",
+            "path": "./tools",
+        },
+        {
+            "name": "Builds",
+            "path": "./builds",
+        },
+        {
+            "name": "Root",
+            "path": ".",
+        }
+    ],
+    "settings": {
+        "licenser.disableAutoHeaderInsertion": true,
+        "licenser.license": "CC-BY-NC-4",
+        "licenser.projectName": "LÖVE Game",
+        "licenser.useSingleLineStyle": false
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "type": "lua-local",
+            "request": "launch",
+            "name": "Debug",
+            "program": {
+                "command": "love"
+            },
+            "args": [
+                ".",
+                "-debug"
+            ],
+        },
+        {
+            "type": "lua-local",
+            "request": "launch",
+            "name": "Release",
+            "program": {
+                "command": "love"
+            },
+            "args": [
+                ".",
+            ],
+        }
+    ]
+}
