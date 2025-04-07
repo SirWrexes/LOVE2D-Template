@@ -1,5 +1,6 @@
+DEBUG = false
+
 if os.getenv "LOCAL_LUA_DEBUGGER_VSCODE" == "1" then
-    local DEBUG = false
     for _, v in ipairs(arg) do
         if v == "-debug" then
             DEBUG = true
