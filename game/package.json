@@ -31,14 +31,15 @@
   "packageManager": "pnpm@10.10.0",
   "scripts": {
     "clean": "node ./scripts/clean.js",
-    "precompile": "pnpm clean",
     "compile": "tstl",
-    "prebuild": "pnpm compile",
+    "recompile": "pnpm clean && pnpm compile",
     "build": "node ./scripts/build.js",
+    "rebuild": "pnpm clean && pnpm build",
     "watch": "tstl --watch",
-    "prestart": "pnpm compile",
-    "start": "love  --console ./lua --dev",
-    "start:now": "pnpm start --ignore-scripts"
+    "start": "love ./lua",
+    "restart": "pnpm recompile && love ./lua",
+    "dev": "love --console ./lua --dev",
+    "redev": "pnpm recompile && love  --console ./lua --dev"
   },
   "version": "1.0.0"
 }
