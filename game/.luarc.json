@@ -1,4 +1,8 @@
 {
+    "workspace.ignoreDir": [
+        ".vscode",
+        "node_modules"
+    ],
     "diagnostics.disable": [
         "redefined-local"
     ],
