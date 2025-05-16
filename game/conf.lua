@@ -5,7 +5,21 @@
     All of these are the default values.
 ]]
 
+require "lib.inspect"
+require "lib.Util"
+
 require "src.debug"
+
+---@alias DebugPrint.Message
+---| string A normal message string
+---| fun(): ... A factory function if message is not a hardcoded string
+
+local _print = print
+print = not (__DEV or __DEBUG) and noop
+    ---@param message DebugPrint.Message
+    or function(message, ...)
+        _print(type(message) == "function" and message() or message, ...)
+    end
 
 function love.conf(t)
     t.identity = nil -- The name of the save directory (string)
@@ -19,9 +33,9 @@ function love.conf(t)
     t.audio.mic = false -- Request and use microphone capabilities in Android (boolean)
     t.audio.mixwithsystem = true -- Keep background music playing when opening LOVE (boolean, iOS and Android only)
 
-    t.window.title = "Untitled" -- The window title (string)
+    t.window.title = "Nervous Breakout" -- The window title (string)
     t.window.icon = nil -- Filepath to an image to use as the window's icon (string)
-    t.window.width = 800 -- The window width (number)
+    t.window.width = 600 -- The window width (number)
     t.window.height = 600 -- The window height (number)
     t.window.borderless = false -- Remove all border visuals from the window (boolean)
     t.window.resizable = false -- Let the window be user-resizable (boolean)

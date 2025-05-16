@@ -1,0 +1,15 @@
+---@diagnostic disable: lowercase-global
+
+---Run reporter on completion
+runreport = true
+
+reporter = "html"
+reportfile = "luacov.report.html"
+
+exclude = {
+    "lua_modules",
+    "luarocks",
+    "lib/json.lua",
+    "lib/inspect.lua",
+    "test",
+}
