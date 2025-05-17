@@ -1,5 +1,6 @@
 # TSC Output
-./lua
+lua/
+!.luarc.json
 
 # Logs
 logs

@@ -3,5 +3,6 @@ love.load = () => {}
 love.update = () => {}
 
 love.draw = () => {
-  love.graphics.print('Hello world!', 100, 100)
+  const [width, height] = love.graphics.getDimensions()
+  love.graphics.print('Hello world!', width / 2 - 45, height / 2)
 }

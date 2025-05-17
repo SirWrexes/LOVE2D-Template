@@ -33,13 +33,13 @@
     "clean": "node ./scripts/clean.js",
     "compile": "tstl",
     "recompile": "pnpm clean && pnpm compile",
-    "build": "node ./scripts/build.js",
-    "rebuild": "pnpm clean && pnpm build",
+    "build": "cd ./lua && makelove --config ../make.toml",
+    "rebuild": "pnpm recompile && pnpm build",
     "watch": "tstl --watch",
     "start": "love ./lua",
     "restart": "pnpm recompile && love ./lua",
     "dev": "love --console ./lua --dev",
-    "redev": "pnpm recompile && love  --console ./lua --dev"
+    "redev": "pnpm recompile && pnpm --dev"
   },
   "version": "1.0.0"
 }

@@ -1,6 +1,5 @@
-declare const arg: string[]
-
 const __DEV = arg.includes('--dev')
+const __DEBUG = arg.includes('--debug')
 
 love.conf = t => {
   // t.identity = ""
